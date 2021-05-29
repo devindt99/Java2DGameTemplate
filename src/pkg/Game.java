@@ -1,3 +1,5 @@
+//banana apple
+
 package pkg;
 import java.awt.Canvas;
 import java.awt.Color;
@@ -5,10 +7,7 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.image.BufferStrategy;
 import java.awt.image.BufferedImage;
-/**
- * @author Zack (RealTutsGML), Notch, Devin
- *
- */
+
 public class Game extends Canvas implements Runnable { //Canvas provides a surface to draw objects onto and runnable lets us use our game thread.
 
 	////////////////////////////////////data fields/////////////////////////////////////
@@ -33,13 +32,12 @@ public class Game extends Canvas implements Runnable { //Canvas provides a surfa
 	
 	//Game() constructor holds everything that must be initialized when the game begins, such as levels, input listeners, the camera, etc. 
 	public Game() {
-		new Window(1000, 563, "Game", this);
+		new Window(1000, 564, "Game", this);
 		start();
 		
 		handler = new Handler();
 		camera = new Camera(0,0);
 		this.addKeyListener(new KeyInput(handler));
-
 		
 		BufferedImageLoader loader = new BufferedImageLoader();
 	
