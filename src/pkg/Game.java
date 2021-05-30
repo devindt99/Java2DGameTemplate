@@ -33,7 +33,7 @@ public class Game extends Canvas implements Runnable { //Canvas provides a surfa
 	
 	//Game() constructor holds everything that must be initialized when the game begins, such as levels, input listeners, the camera, etc. 
 	public Game() {
-		new Window(1000, 563, "Game", this);
+		new Window(1000, 562, "Game", this);
 		start();
 		
 		handler = new Handler();
