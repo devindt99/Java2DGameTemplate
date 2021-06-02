@@ -1,0 +1,893 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Try the new cross-platform PowerShell https://aka.ms/pscore6
+
+PS C:\Users\devin> git
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--super-prefix=<path>] [--config-env=<name>=<envvar>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone             Clone a repository into a new directory
+   init              Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add               Add file contents to the index
+   mv                Move or rename a file, a directory, or a symlink
+   restore           Restore working tree files
+   rm                Remove files from the working tree and from the index
+   sparse-checkout   Initialize and modify the sparse-checkout
+
+examine the history and state (see also: git help revisions)
+   bisect            Use binary search to find the commit that introduced a bug
+   diff              Show changes between commits, commit and working tree, etc
+   grep              Print lines matching a pattern
+   log               Show commit logs
+   show              Show various types of objects
+   status            Show the working tree status
+
+grow, mark and tweak your common history
+   branch            List, create, or delete branches
+   commit            Record changes to the repository
+   merge             Join two or more development histories together
+   rebase            Reapply commits on top of another base tip
+   reset             Reset current HEAD to the specified state
+   switch            Switch branches
+   tag               Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch             Download objects and refs from another repository
+   pull              Fetch from and integrate with another repository or a local branch
+   push              Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+See 'git help git' for an overview of the system.
+PS C:\Users\devin> ls
+
+
+    Directory: C:\Users\devin
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----          3/1/2020   1:43 PM                .android
+d-----         1/22/2020   1:40 AM                .cache
+d-----         1/16/2021   4:49 PM                .eclipse
+d-----         3/13/2020   6:10 PM                .insomniac
+d-----          6/5/2020  10:24 PM                .Origin
+d-----         5/27/2021  10:18 AM                .p2
+d-----          6/5/2020  10:24 PM                .QtWebEngineProcess
+d-----         6/20/2019   7:00 PM                .swt
+d-----         1/16/2021   4:49 PM                .tooling
+d-----          3/1/2020   8:11 PM                14.2.22 Hospital Insurance Claim Documents
+d-r---         6/26/2020   8:44 PM                3D Objects
+d-----         8/25/2019   6:07 PM                ansel
+d-----         10/9/2019   1:49 PM                Apple
+d-r---         6/26/2020   8:44 PM                Contacts
+d-r---         5/22/2021  10:22 AM                Creative Cloud Files
+d-r---         3/11/2020   5:36 PM                Creative Cloud Files devin_dellazizzo-toth@hotmail.com
+                                                  61b5f499beca26a2e369044627350e2e204fc0b5380fdeb414947564853537a6
+d-r---         5/24/2021   4:41 PM                Desktop
+d-r---        12/26/2018   7:31 PM                devindt99@gmail.com Creative Cloud Files
+d-r---          5/4/2021   2:37 PM                Documents
+d-r---         5/29/2021   6:38 PM                Downloads
+d-----         1/16/2021   4:48 PM                eclipse
+d-----         5/27/2021   3:24 PM                eclipse-workspace
+d-r---         6/26/2020   8:44 PM                Favorites
+d-----         3/24/2020  11:49 PM                Games
+d-r---         6/26/2020   8:44 PM                Links
+d-r---        11/19/2020  11:55 PM                Music
+dar--l         2/24/2021   5:47 PM                OneDrive
+d-r---         2/24/2021   5:02 PM                Pictures
+d-----         5/17/2018   4:18 AM                Roaming
+d-r---        12/13/2020   2:40 PM                Saved Games
+d-r---         6/26/2020   8:44 PM                Searches
+d-----        12/13/2018   7:47 PM                source
+d-----         6/30/2018   9:43 PM                USB contents
+d-----          9/4/2020   2:02 AM                usb_driver
+d-r---         2/24/2021   5:04 PM                Videos
+d-----          3/1/2020   3:46 PM                vridge-preview-installer
+
+
+PS C:\Users\devin> cd .\Desktop\
+PS C:\Users\devin\Desktop> ls
+
+
+    Directory: C:\Users\devin\Desktop
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        12/18/2020  11:44 PM                cosc1046
+d-----         2/24/2021   5:00 PM                Everything
+d-----        11/30/2020  12:16 AM                hidusbf-master
+d-----         5/29/2021   4:59 PM                LU
+-a----         1/14/2021  12:35 AM          15035 138933762_5824425080904731_1933282967158408507_n.jpg
+-a----         8/26/2020  11:02 PM            690 ASIO4ALL v2 Instruction Manual.lnk
+-a----          3/9/2021   1:02 PM              0 ass.txt
+-a----         2/28/2021   5:01 PM              0 banana.txt
+-a----        10/21/2020   2:51 PM            649 Cheat Engine.lnk
+-a----          3/9/2021   1:11 PM              0 copyho.txt
+-a----        12/13/2020  11:25 AM            910 Cyberpunk 2077.lnk
+-a----         5/23/2021   9:09 PM            211 DARK SOULS™ II Scholar of the First Sin.url
+-a----          8/5/2020   1:33 AM            211 DARK SOULS™ REMASTERED.url
+-a----         5/24/2021   4:41 PM            211 Devil May Cry 5.url
+-a----         1/26/2021   4:24 PM         361810 DISC MATH 2 A1.jpeg
+-a----          2/7/2021   9:50 PM            211 Dying Light.url
+-a----         1/16/2021   4:48 PM           1100 Eclipse IDE for Java Developers - 2020-12.lnk
+-a----          3/9/2021   1:15 PM              0 f.txt
+-a----          3/9/2021   1:16 PM              0 f1.txt
+-a----         9/21/2020   7:50 PM          43778 Fall2020 LU schedule.png
+-a----         5/14/2021   5:17 PM            210 Fallout New Vegas.url
+-a----         2/14/2021   4:28 PM           1233 FillInTheBlankTester.java
+-a----         8/26/2020  10:59 PM            662 FL Studio 20.lnk
+-a----          3/9/2021   1:03 PM              0 frig.txt
+-a----          3/9/2021   1:19 PM             53 fug.txt
+-a----         4/10/2021  10:13 PM           1127 GameRanger.lnk
+-a----         5/29/2021   6:15 PM           2336 Gener8.lnk
+-a----          3/9/2021   1:13 PM              0 gog.txt
+-a----         2/27/2020  12:31 AM           1293 Google Chrome.lnk
+-a----         11/1/2020   9:04 PM            212 Hades.url
+-a----         1/13/2021  10:17 PM            593 HandBrake.lnk
+-a----         5/22/2021  10:21 AM           1713 HearthArena Companion.lnk
+-a----         1/25/2021   8:29 PM           2541 Hearthstone Deck Tracker.lnk
+-a----          3/9/2021   1:06 PM              0 lol.txt
+-a----        10/29/2020  11:21 PM           2362 Microsoft Teams.lnk
+-a----         7/23/2020   1:13 PM            211 Monster Girl Island Prologue.url
+-a----         2/13/2021   7:54 PM            211 Monster Slayers.url
+-a----          9/7/2020   1:40 AM            212 Monster Train.url
+-a----         1/12/2021   8:29 PM            212 NEKOPARA Vol. 4.url
+-a----         10/3/2020   9:31 PM            211 No Man's Sky.url
+-a----         9/15/2020   8:35 PM           1529 notepad++ - Shortcut.lnk
+-a----        11/17/2020   2:16 PM            247 openpacks.ahk
+-a----         4/12/2021   5:50 PM            211 Path of Exile.url
+-a----          2/3/2021   9:13 AM          91139 PHYSIO DOCTOR'S NOTE Export-DD-BRSU-20210105.pdf
+------         2/14/2021   7:22 PM           2703 Quiz.java
+------         2/14/2021   7:21 PM           1786 QuizTester.java
+-a----         7/29/2020   3:06 PM            211 Risk of Rain 2.url
+-a----          2/5/2021   7:45 AM            211 Slay the Spire.url
+-a----         2/25/2019   8:58 PM            876 text1.txt
+-a----         9/28/2020   8:22 PM           4564 truthtable.gif
+-a----        12/29/2020   5:09 PM            434 TutorChat Consultant.appref-ms
+-a----         2/12/2021   3:41 PM            211 Valheim.url
+-a----         4/25/2021  10:29 PM            211 Warhammer Vermintide 2.url
+-a----          3/9/2021   1:20 PM            876 wer.txt
+-a----         5/22/2021  12:30 PM            211 Wizard of Legend.url
+
+
+PS C:\Users\devin\Desktop> cd .\LU\
+PS C:\Users\devin\Desktop\LU> ls
+
+
+    Directory: C:\Users\devin\Desktop\LU
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----         2/23/2021   5:06 PM                ANCS 2016 EL
+d-----        12/10/2020   9:38 PM                ANCS 2136 EL
+d-----         1/21/2021   7:58 PM                ANCS 2527 EL
+d-----         4/16/2021  11:55 PM                COSC 1047 EL
+d-----        10/28/2020   5:21 PM                COSC 1056 EL
+d-----         5/17/2021   5:37 PM                COSC 2006 Data Structs
+d-----         4/26/2021   8:37 AM                COSC 2056 EL
+d-----        10/26/2020   7:59 PM                GEOL 1021 EL
+-a----         4/15/2021   3:39 PM         234952 ARCHAEO due date proof.png
+-a----         1/20/2021   2:11 PM        1177517 Bananaboy with QR code.png
+-a----          3/9/2021   2:13 PM         109055 COSC1047 A2 instructions.png
+-a----         1/19/2021   3:03 PM         139378 Fall 2020 Grades.jpg
+-a----         1/19/2021   2:20 PM          69692 Fall 2020 Grades.png
+-a----          2/3/2021  11:44 AM         379662 Insurance claim submitted proof 2.3.21.png
+-a----         4/27/2021   2:19 PM          13281 Java2DGameTemplateShare.zip
+-a----          5/6/2021   4:15 PM         525014 Java2DGameTemplateShare_v2.zip
+-a----         5/29/2021   5:00 PM         528440 Java2DGameTemplate_v3.zip
+-a----          3/4/2021   9:30 PM         270543 KidsUP honbu phone number (highlighted blue phone number).png
+-a----         3/20/2021   6:40 PM         177634 Payment record.png
+-a----         1/21/2021   3:53 PM         262945 Toolache Wallaby Trading Card Devin Dellazizzo Toth.pdf
+-a----         1/12/2021   4:41 PM          85670 Winter 2021 Schedule.png
+-a----         1/16/2021   4:24 PM         166313 Winter 2021 tuition proof of payment.png
+-a----         4/26/2021   8:00 PM         607050 zensofit acupuncture pen proof of purchase.png
+
+
+PS C:\Users\devin\Desktop\LU> cd
+PS C:\Users\devin\Desktop\LU> cd..
+PS C:\Users\devin\Desktop> cd..
+PS C:\Users\devin> cd ls
+cd : Cannot find path 'C:\Users\devin\ls' because it does not exist.
+At line:1 char:1
++ cd ls
++ ~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\devin\ls:String) [Set-Location], ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.SetLocationCommand
+
+PS C:\Users\devin> ls
+
+
+    Directory: C:\Users\devin
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----          3/1/2020   1:43 PM                .android
+d-----         1/22/2020   1:40 AM                .cache
+d-----         1/16/2021   4:49 PM                .eclipse
+d-----         3/13/2020   6:10 PM                .insomniac
+d-----          6/5/2020  10:24 PM                .Origin
+d-----         5/27/2021  10:18 AM                .p2
+d-----          6/5/2020  10:24 PM                .QtWebEngineProcess
+d-----         6/20/2019   7:00 PM                .swt
+d-----         1/16/2021   4:49 PM                .tooling
+d-----          3/1/2020   8:11 PM                14.2.22 Hospital Insurance Claim Documents
+d-r---         6/26/2020   8:44 PM                3D Objects
+d-----         8/25/2019   6:07 PM                ansel
+d-----         10/9/2019   1:49 PM                Apple
+d-r---         6/26/2020   8:44 PM                Contacts
+d-r---         5/22/2021  10:22 AM                Creative Cloud Files
+d-r---         3/11/2020   5:36 PM                Creative Cloud Files devin_dellazizzo-toth@hotmail.com
+                                                  61b5f499beca26a2e369044627350e2e204fc0b5380fdeb414947564853537a6
+d-r---         5/24/2021   4:41 PM                Desktop
+d-r---        12/26/2018   7:31 PM                devindt99@gmail.com Creative Cloud Files
+d-r---          5/4/2021   2:37 PM                Documents
+d-r---         5/29/2021   6:38 PM                Downloads
+d-----         1/16/2021   4:48 PM                eclipse
+d-----         5/27/2021   3:24 PM                eclipse-workspace
+d-r---         6/26/2020   8:44 PM                Favorites
+d-----         3/24/2020  11:49 PM                Games
+d-r---         6/26/2020   8:44 PM                Links
+d-r---        11/19/2020  11:55 PM                Music
+dar--l         2/24/2021   5:47 PM                OneDrive
+d-r---         2/24/2021   5:02 PM                Pictures
+d-----         5/17/2018   4:18 AM                Roaming
+d-r---        12/13/2020   2:40 PM                Saved Games
+d-r---         6/26/2020   8:44 PM                Searches
+d-----        12/13/2018   7:47 PM                source
+d-----         6/30/2018   9:43 PM                USB contents
+d-----          9/4/2020   2:02 AM                usb_driver
+d-r---         2/24/2021   5:04 PM                Videos
+d-----          3/1/2020   3:46 PM                vridge-preview-installer
+
+
+PS C:\Users\devin> cd .\eclipse-workspace\
+PS C:\Users\devin\eclipse-workspace> ls
+
+
+    Directory: C:\Users\devin\eclipse-workspace
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----         1/16/2021   4:49 PM                .metadata
+d-----         5/17/2021  12:07 PM                Assignment 1
+d-----         5/27/2021   3:24 PM                CanadaArcadia
+d-----         4/15/2021   9:54 AM                COSC 1047 Final Project
+d-----         4/16/2021   4:30 PM                cosc1047-final-devin-dellazizzo-toth
+d-----         4/16/2021  11:58 PM                cosc1047-final-devin-dellazizzo-toth-COMPLETED.zip_expanded
+d-----         1/16/2021   5:08 PM                cosc1047-w21-a1
+d-----         1/16/2021   6:43 PM                cosc1047-w21-a1 COMPLETED.zip_expanded
+d-----         1/24/2021  10:21 PM                cosc1047-w21-a2
+d-----         1/31/2021   3:44 PM                cosc1047-w21-a3
+d-----         2/14/2021   9:57 AM                cosc1047-w21-a4.zip_expanded
+d-----          3/9/2021   1:13 PM                cosc1047-w21-a5
+d-----         3/14/2021   4:43 PM                cosc1047-w21-a7
+d-----         3/21/2021  11:56 AM                cosc1047-w21-a8
+d-----         5/27/2021  10:25 AM                FoodFightFantasy
+d-----          5/6/2021  12:10 AM                Java2DGameTemplate
+d-----         4/20/2021   2:59 PM                JOGL_game
+d-----          5/6/2021   5:02 PM                Platformer
+d-----         4/16/2021  11:04 AM                simplegame.zip_expanded
+d-----         1/31/2021   4:36 PM                Tester
+
+
+PS C:\Users\devin\eclipse-workspace> cd .\Java2DGameTemplate\
+PS C:\Users\devin\eclipse-workspace\Java2DGameTemplate> ls
+
+
+    Directory: C:\Users\devin\eclipse-workspace\Java2DGameTemplate
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----         4/21/2021   6:59 PM                .settings
+d-----         5/17/2021  12:07 PM                bin
+d-----          5/6/2021  12:11 AM                doc
+d-----         5/10/2021   3:11 PM                res
+d-----          5/6/2021   8:26 PM                src
+-a----         4/27/2021   5:27 PM            438 .classpath
+-a----         4/27/2021   2:02 PM            394 .project
+
+
+PS C:\Users\devin\eclipse-workspace\Java2DGameTemplate> git init
+Initialized empty Git repository in C:/Users/devin/eclipse-workspace/Java2DGameTemplate/.git/
+PS C:\Users\devin\eclipse-workspace\Java2DGameTemplate> ls
+
+
+    Directory: C:\Users\devin\eclipse-workspace\Java2DGameTemplate
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----         4/21/2021   6:59 PM                .settings
+d-----         5/17/2021  12:07 PM                bin
+d-----          5/6/2021  12:11 AM                doc
+d-----         5/10/2021   3:11 PM                res
+d-----          5/6/2021   8:26 PM                src
+-a----         4/27/2021   5:27 PM            438 .classpath
+-a----         4/27/2021   2:02 PM            394 .project
+
+
+PS C:\Users\devin\eclipse-workspace\Java2DGameTemplate> ls - lla
+ls : Cannot find path 'C:\Users\devin\eclipse-workspace\Java2DGameTemplate\-' because it does not exist.
+At line:1 char:1
++ ls - lla
++ ~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\devin\...DGameTemplate\-:String) [Get-ChildItem], ItemNotFound
+   Exception
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.GetChildItemCommand
+
+PS C:\Users\devin\eclipse-workspace\Java2DGameTemplate> ls -la
+Get-ChildItem : A parameter cannot be found that matches parameter name 'la'.
+At line:1 char:4
++ ls -la
++    ~~~
+    + CategoryInfo          : InvalidArgument: (:) [Get-ChildItem], ParameterBindingException
+    + FullyQualifiedErrorId : NamedParameterNotFound,Microsoft.PowerShell.Commands.GetChildItemCommand
+
+PS C:\Users\devin\eclipse-workspace\Java2DGameTemplate> git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .classpath
+        .project
+        .settings/
+        bin/
+        doc/
+        res/
+        src/
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\Users\devin\eclipse-workspace\Java2DGameTemplate> touch .gitignore
+touch : The term 'touch' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ touch .gitignore
++ ~~~~~
+    + CategoryInfo          : ObjectNotFound: (touch:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\devin\eclipse-workspace\Java2DGameTemplate> git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+        .settings/
+        bin/
+        doc/
+        res/
+        src/
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\Users\devin\eclipse-workspace\Java2DGameTemplate> git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+        bin/
+        doc/
+        res/
+        src/
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\Users\devin\eclipse-workspace\Java2DGameTemplate> git add .
+warning: LF will be replaced by CRLF in doc/script-dir/external/jquery/jquery.js.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in doc/script-dir/jquery-3.4.1.js.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in doc/script-dir/jquery-ui.css.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in doc/script-dir/jquery-ui.js.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in doc/script-dir/jquery-ui.min.css.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in doc/script-dir/jquery-ui.min.js.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in doc/script-dir/jquery-ui.structure.css.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in doc/script-dir/jquery-ui.structure.min.css.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in doc/script-dir/jszip-utils/dist/jszip-utils-ie.js.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in doc/script-dir/jszip-utils/dist/jszip-utils-ie.min.js.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in doc/script-dir/jszip-utils/dist/jszip-utils.js.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in doc/script-dir/jszip-utils/dist/jszip-utils.min.js.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in doc/script-dir/jszip/dist/jszip.js.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in doc/script-dir/jszip/dist/jszip.min.js.
+The file will have its original line endings in your working directory
+PS C:\Users\devin\eclipse-workspace\Java2DGameTemplate> git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   .gitignore
+        new file:   bin/pkg/AmmoCrate.class
+        new file:   bin/pkg/Block.class
+        new file:   bin/pkg/BufferedImageLoader.class
+        new file:   bin/pkg/Bullet.class
+        new file:   bin/pkg/Camera.class
+        new file:   bin/pkg/Enemy.class
+        new file:   bin/pkg/Exit.class
+        new file:   bin/pkg/Game.class
+        new file:   bin/pkg/GameObject.class
+        new file:   bin/pkg/Handler.class
+        new file:   bin/pkg/ID.class
+        new file:   bin/pkg/KeyInput.class
+        new file:   bin/pkg/MouseInput.class
+        new file:   bin/pkg/Player.class
+        new file:   bin/pkg/SpriteSheet.class
+        new file:   bin/pkg/Window.class
+        new file:   doc/AmmoCrate.html
+        new file:   doc/Block.html
+        new file:   doc/BufferedImageLoader.html
+        new file:   doc/Bullet.html
+        new file:   doc/Camera.html
+        new file:   doc/Enemy.html
+        new file:   doc/Exit.html
+        new file:   doc/Game.html
+        new file:   doc/GameObject.html
+        new file:   doc/Handler.html
+        new file:   doc/ID.html
+        new file:   doc/KeyInput.html
+        new file:   doc/MouseInput.html
+        new file:   doc/Player.html
+        new file:   doc/SpriteSheet.html
+        new file:   doc/Window.html
+        new file:   doc/allclasses-index.html
+        new file:   doc/allpackages-index.html
+        new file:   doc/class-use/AmmoCrate.html
+        new file:   doc/class-use/Block.html
+        new file:   doc/class-use/BufferedImageLoader.html
+        new file:   doc/class-use/Bullet.html
+        new file:   doc/class-use/Camera.html
+        new file:   doc/class-use/Enemy.html
+        new file:   doc/class-use/Exit.html
+        new file:   doc/class-use/Game.html
+        new file:   doc/class-use/GameObject.html
+        new file:   doc/class-use/Handler.html
+        new file:   doc/class-use/ID.html
+        new file:   doc/class-use/KeyInput.html
+        new file:   doc/class-use/MouseInput.html
+        new file:   doc/class-use/Player.html
+        new file:   doc/class-use/SpriteSheet.html
+        new file:   doc/class-use/Window.html
+        new file:   doc/constant-values.html
+        new file:   doc/deprecated-list.html
+        new file:   doc/element-list
+        new file:   doc/help-doc.html
+        new file:   doc/index-files/index-1.html
+        new file:   doc/index-files/index-10.html
+        new file:   doc/index-files/index-11.html
+        new file:   doc/index-files/index-12.html
+        new file:   doc/index-files/index-13.html
+        new file:   doc/index-files/index-14.html
+        new file:   doc/index-files/index-15.html
+        new file:   doc/index-files/index-16.html
+        new file:   doc/index-files/index-17.html
+        new file:   doc/index-files/index-2.html
+        new file:   doc/index-files/index-3.html
+        new file:   doc/index-files/index-4.html
+        new file:   doc/index-files/index-5.html
+        new file:   doc/index-files/index-6.html
+        new file:   doc/index-files/index-7.html
+        new file:   doc/index-files/index-8.html
+        new file:   doc/index-files/index-9.html
+        new file:   doc/index.html
+        new file:   doc/member-search-index.js
+        new file:   doc/member-search-index.zip
+        new file:   doc/overview-tree.html
+        new file:   doc/package-search-index.js
+        new file:   doc/package-search-index.zip
+        new file:   doc/package-summary.html
+        new file:   doc/package-tree.html
+        new file:   doc/package-use.html
+        new file:   doc/resources/glass.png
+        new file:   doc/resources/x.png
+        new file:   doc/script-dir/external/jquery/jquery.js
+        new file:   doc/script-dir/images/ui-bg_glass_55_fbf9ee_1x400.png
+        new file:   doc/script-dir/images/ui-bg_glass_65_dadada_1x400.png
+        new file:   doc/script-dir/images/ui-bg_glass_75_dadada_1x400.png
+        new file:   doc/script-dir/images/ui-bg_glass_75_e6e6e6_1x400.png
+        new file:   doc/script-dir/images/ui-bg_glass_95_fef1ec_1x400.png
+        new file:   doc/script-dir/images/ui-bg_highlight-soft_75_cccccc_1x100.png
+        new file:   doc/script-dir/images/ui-icons_222222_256x240.png
+        new file:   doc/script-dir/images/ui-icons_2e83ff_256x240.png
+        new file:   doc/script-dir/images/ui-icons_454545_256x240.png
+        new file:   doc/script-dir/images/ui-icons_888888_256x240.png
+        new file:   doc/script-dir/images/ui-icons_cd0a0a_256x240.png
+        new file:   doc/script-dir/jquery-3.4.1.js
+        new file:   doc/script-dir/jquery-ui.css
+        new file:   doc/script-dir/jquery-ui.js
+        new file:   doc/script-dir/jquery-ui.min.css
+        new file:   doc/script-dir/jquery-ui.min.js
+        new file:   doc/script-dir/jquery-ui.structure.css
+        new file:   doc/script-dir/jquery-ui.structure.min.css
+        new file:   doc/script-dir/jszip-utils/dist/jszip-utils-ie.js
+        new file:   doc/script-dir/jszip-utils/dist/jszip-utils-ie.min.js
+        new file:   doc/script-dir/jszip-utils/dist/jszip-utils.js
+        new file:   doc/script-dir/jszip-utils/dist/jszip-utils.min.js
+        new file:   doc/script-dir/jszip/dist/jszip.js
+        new file:   doc/script-dir/jszip/dist/jszip.min.js
+        new file:   doc/script.js
+        new file:   doc/search.js
+        new file:   doc/serialized-form.html
+        new file:   doc/stylesheet.css
+        new file:   doc/system-properties.html
+        new file:   doc/type-search-index.js
+        new file:   doc/type-search-index.zip
+        new file:   res/fff_sprite_sheet.png
+        new file:   res/game_over.png
+        new file:   res/sprite_sheet.png
+        new file:   res/wizard_level.png
+        new file:   res/you_win.png
+        new file:   src/pkg/AmmoCrate.java
+        new file:   src/pkg/Block.java
+        new file:   src/pkg/BufferedImageLoader.java
+        new file:   src/pkg/Bullet.java
+        new file:   src/pkg/Camera.java
+        new file:   src/pkg/Enemy.java
+        new file:   src/pkg/Exit.java
+        new file:   src/pkg/Game.java
+        new file:   src/pkg/GameObject.java
+        new file:   src/pkg/Handler.java
+        new file:   src/pkg/ID.java
+        new file:   src/pkg/KeyInput.java
+        new file:   src/pkg/MouseInput.java
+        new file:   src/pkg/Player.java
+        new file:   src/pkg/SpriteSheet.java
+        new file:   src/pkg/Window.java
+
+PS C:\Users\devin\eclipse-workspace\Java2DGameTemplate> git commit -m 'initial commit'
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'devin@DESKTOP-5Q49BJ7.(none)')
+PS C:\Users\devin\eclipse-workspace\Java2DGameTemplate> git config --global user.email "devindt99@gmail.com"
+PS C:\Users\devin\eclipse-workspace\Java2DGameTemplate> git config --global user.name "devindt99"
+PS C:\Users\devin\eclipse-workspace\Java2DGameTemplate> git commit -m 'initial commit'
+[master (root-commit) 157552f] initial commit
+ 136 files changed, 49809 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 bin/pkg/AmmoCrate.class
+ create mode 100644 bin/pkg/Block.class
+ create mode 100644 bin/pkg/BufferedImageLoader.class
+ create mode 100644 bin/pkg/Bullet.class
+ create mode 100644 bin/pkg/Camera.class
+ create mode 100644 bin/pkg/Enemy.class
+ create mode 100644 bin/pkg/Exit.class
+ create mode 100644 bin/pkg/Game.class
+ create mode 100644 bin/pkg/GameObject.class
+ create mode 100644 bin/pkg/Handler.class
+ create mode 100644 bin/pkg/ID.class
+ create mode 100644 bin/pkg/KeyInput.class
+ create mode 100644 bin/pkg/MouseInput.class
+ create mode 100644 bin/pkg/Player.class
+ create mode 100644 bin/pkg/SpriteSheet.class
+ create mode 100644 bin/pkg/Window.class
+ create mode 100644 doc/AmmoCrate.html
+ create mode 100644 doc/Block.html
+ create mode 100644 doc/BufferedImageLoader.html
+ create mode 100644 doc/Bullet.html
+ create mode 100644 doc/Camera.html
+ create mode 100644 doc/Enemy.html
+ create mode 100644 doc/Exit.html
+ create mode 100644 doc/Game.html
+ create mode 100644 doc/GameObject.html
+ create mode 100644 doc/Handler.html
+ create mode 100644 doc/ID.html
+ create mode 100644 doc/KeyInput.html
+ create mode 100644 doc/MouseInput.html
+ create mode 100644 doc/Player.html
+ create mode 100644 doc/SpriteSheet.html
+ create mode 100644 doc/Window.html
+ create mode 100644 doc/allclasses-index.html
+ create mode 100644 doc/allpackages-index.html
+ create mode 100644 doc/class-use/AmmoCrate.html
+ create mode 100644 doc/class-use/Block.html
+ create mode 100644 doc/class-use/BufferedImageLoader.html
+ create mode 100644 doc/class-use/Bullet.html
+ create mode 100644 doc/class-use/Camera.html
+ create mode 100644 doc/class-use/Enemy.html
+ create mode 100644 doc/class-use/Exit.html
+ create mode 100644 doc/class-use/Game.html
+ create mode 100644 doc/class-use/GameObject.html
+ create mode 100644 doc/class-use/Handler.html
+ create mode 100644 doc/class-use/ID.html
+ create mode 100644 doc/class-use/KeyInput.html
+ create mode 100644 doc/class-use/MouseInput.html
+ create mode 100644 doc/class-use/Player.html
+ create mode 100644 doc/class-use/SpriteSheet.html
+ create mode 100644 doc/class-use/Window.html
+ create mode 100644 doc/constant-values.html
+ create mode 100644 doc/deprecated-list.html
+ create mode 100644 doc/element-list
+ create mode 100644 doc/help-doc.html
+ create mode 100644 doc/index-files/index-1.html
+ create mode 100644 doc/index-files/index-10.html
+ create mode 100644 doc/index-files/index-11.html
+ create mode 100644 doc/index-files/index-12.html
+ create mode 100644 doc/index-files/index-13.html
+ create mode 100644 doc/index-files/index-14.html
+ create mode 100644 doc/index-files/index-15.html
+ create mode 100644 doc/index-files/index-16.html
+ create mode 100644 doc/index-files/index-17.html
+ create mode 100644 doc/index-files/index-2.html
+ create mode 100644 doc/index-files/index-3.html
+ create mode 100644 doc/index-files/index-4.html
+ create mode 100644 doc/index-files/index-5.html
+ create mode 100644 doc/index-files/index-6.html
+ create mode 100644 doc/index-files/index-7.html
+ create mode 100644 doc/index-files/index-8.html
+ create mode 100644 doc/index-files/index-9.html
+ create mode 100644 doc/index.html
+ create mode 100644 doc/member-search-index.js
+ create mode 100644 doc/member-search-index.zip
+ create mode 100644 doc/overview-tree.html
+ create mode 100644 doc/package-search-index.js
+ create mode 100644 doc/package-search-index.zip
+ create mode 100644 doc/package-summary.html
+ create mode 100644 doc/package-tree.html
+ create mode 100644 doc/package-use.html
+ create mode 100644 doc/resources/glass.png
+ create mode 100644 doc/resources/x.png
+ create mode 100644 doc/script-dir/external/jquery/jquery.js
+ create mode 100644 doc/script-dir/images/ui-bg_glass_55_fbf9ee_1x400.png
+ create mode 100644 doc/script-dir/images/ui-bg_glass_65_dadada_1x400.png
+ create mode 100644 doc/script-dir/images/ui-bg_glass_75_dadada_1x400.png
+ create mode 100644 doc/script-dir/images/ui-bg_glass_75_e6e6e6_1x400.png
+ create mode 100644 doc/script-dir/images/ui-bg_glass_95_fef1ec_1x400.png
+ create mode 100644 doc/script-dir/images/ui-bg_highlight-soft_75_cccccc_1x100.png
+ create mode 100644 doc/script-dir/images/ui-icons_222222_256x240.png
+ create mode 100644 doc/script-dir/images/ui-icons_2e83ff_256x240.png
+ create mode 100644 doc/script-dir/images/ui-icons_454545_256x240.png
+ create mode 100644 doc/script-dir/images/ui-icons_888888_256x240.png
+ create mode 100644 doc/script-dir/images/ui-icons_cd0a0a_256x240.png
+ create mode 100644 doc/script-dir/jquery-3.4.1.js
+ create mode 100644 doc/script-dir/jquery-ui.css
+ create mode 100644 doc/script-dir/jquery-ui.js
+ create mode 100644 doc/script-dir/jquery-ui.min.css
+ create mode 100644 doc/script-dir/jquery-ui.min.js
+ create mode 100644 doc/script-dir/jquery-ui.structure.css
+ create mode 100644 doc/script-dir/jquery-ui.structure.min.css
+ create mode 100644 doc/script-dir/jszip-utils/dist/jszip-utils-ie.js
+ create mode 100644 doc/script-dir/jszip-utils/dist/jszip-utils-ie.min.js
+ create mode 100644 doc/script-dir/jszip-utils/dist/jszip-utils.js
+ create mode 100644 doc/script-dir/jszip-utils/dist/jszip-utils.min.js
+ create mode 100644 doc/script-dir/jszip/dist/jszip.js
+ create mode 100644 doc/script-dir/jszip/dist/jszip.min.js
+ create mode 100644 doc/script.js
+ create mode 100644 doc/search.js
+ create mode 100644 doc/serialized-form.html
+ create mode 100644 doc/stylesheet.css
+ create mode 100644 doc/system-properties.html
+ create mode 100644 doc/type-search-index.js
+ create mode 100644 doc/type-search-index.zip
+ create mode 100644 res/fff_sprite_sheet.png
+ create mode 100644 res/game_over.png
+ create mode 100644 res/sprite_sheet.png
+ create mode 100644 res/wizard_level.png
+ create mode 100644 res/you_win.png
+ create mode 100644 src/pkg/AmmoCrate.java
+ create mode 100644 src/pkg/Block.java
+ create mode 100644 src/pkg/BufferedImageLoader.java
+ create mode 100644 src/pkg/Bullet.java
+ create mode 100644 src/pkg/Camera.java
+ create mode 100644 src/pkg/Enemy.java
+ create mode 100644 src/pkg/Exit.java
+ create mode 100644 src/pkg/Game.java
+ create mode 100644 src/pkg/GameObject.java
+ create mode 100644 src/pkg/Handler.java
+ create mode 100644 src/pkg/ID.java
+ create mode 100644 src/pkg/KeyInput.java
+ create mode 100644 src/pkg/MouseInput.java
+ create mode 100644 src/pkg/Player.java
+ create mode 100644 src/pkg/SpriteSheet.java
+ create mode 100644 src/pkg/Window.java
+PS C:\Users\devin\eclipse-workspace\Java2DGameTemplate> git remote add origin https://github.com/devindt99/java2DGameTemplate.git
+PS C:\Users\devin\eclipse-workspace\Java2DGameTemplate> git push -u origin master
+info: please complete authentication in your browser...
+Enumerating objects: 154, done.
+Counting objects: 100% (154/154), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (146/146), done.
+Writing objects: 100% (154/154), 344.25 KiB | 5.74 MiB/s, done.
+Total 154 (delta 60), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (60/60), done.
+To https://github.com/devindt99/java2DGameTemplate.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+PS C:\Users\devin\eclipse-workspace\Java2DGameTemplate> git checkout -b test
+Switched to a new branch 'test'
+PS C:\Users\devin\eclipse-workspace\Java2DGameTemplate> git push -u origin test
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'test' on GitHub by visiting:
+remote:      https://github.com/devindt99/java2DGameTemplate/pull/new/test
+remote:
+To https://github.com/devindt99/java2DGameTemplate.git
+ * [new branch]      test -> test
+Branch 'test' set up to track remote branch 'test' from 'origin'.
+PS C:\Users\devin\eclipse-workspace\Java2DGameTemplate> git status
+On branch test
+Your branch is up to date with 'origin/test'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   bin/pkg/Game.class
+        modified:   src/pkg/Game.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\devin\eclipse-workspace\Java2DGameTemplate> git status
+On branch test
+Your branch is up to date with 'origin/test'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+        modified:   bin/pkg/Game.class
+        modified:   src/pkg/Game.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\devin\eclipse-workspace\Java2DGameTemplate> git rm -rf bin
+rm 'bin/pkg/AmmoCrate.class'
+rm 'bin/pkg/Block.class'
+rm 'bin/pkg/BufferedImageLoader.class'
+rm 'bin/pkg/Bullet.class'
+rm 'bin/pkg/Camera.class'
+rm 'bin/pkg/Enemy.class'
+rm 'bin/pkg/Exit.class'
+rm 'bin/pkg/Game.class'
+rm 'bin/pkg/GameObject.class'
+rm 'bin/pkg/Handler.class'
+rm 'bin/pkg/ID.class'
+rm 'bin/pkg/KeyInput.class'
+rm 'bin/pkg/MouseInput.class'
+rm 'bin/pkg/Player.class'
+rm 'bin/pkg/SpriteSheet.class'
+rm 'bin/pkg/Window.class'
+PS C:\Users\devin\eclipse-workspace\Java2DGameTemplate> git status
+On branch test
+Your branch is up to date with 'origin/test'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    bin/pkg/AmmoCrate.class
+        deleted:    bin/pkg/Block.class
+        deleted:    bin/pkg/BufferedImageLoader.class
+        deleted:    bin/pkg/Bullet.class
+        deleted:    bin/pkg/Camera.class
+        deleted:    bin/pkg/Enemy.class
+        deleted:    bin/pkg/Exit.class
+        deleted:    bin/pkg/Game.class
+        deleted:    bin/pkg/GameObject.class
+        deleted:    bin/pkg/Handler.class
+        deleted:    bin/pkg/ID.class
+        deleted:    bin/pkg/KeyInput.class
+        deleted:    bin/pkg/MouseInput.class
+        deleted:    bin/pkg/Player.class
+        deleted:    bin/pkg/SpriteSheet.class
+        deleted:    bin/pkg/Window.class
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+        modified:   src/pkg/Game.java
+
+PS C:\Users\devin\eclipse-workspace\Java2DGameTemplate> git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Turn this message off by running
+hint: "git config advice.addEmptyPathspec false"
+PS C:\Users\devin\eclipse-workspace\Java2DGameTemplate> git add .
+PS C:\Users\devin\eclipse-workspace\Java2DGameTemplate> git status
+On branch test
+Your branch is up to date with 'origin/test'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   .gitignore
+        deleted:    bin/pkg/AmmoCrate.class
+        deleted:    bin/pkg/Block.class
+        deleted:    bin/pkg/BufferedImageLoader.class
+        deleted:    bin/pkg/Bullet.class
+        deleted:    bin/pkg/Camera.class
+        deleted:    bin/pkg/Enemy.class
+        deleted:    bin/pkg/Exit.class
+        deleted:    bin/pkg/Game.class
+        deleted:    bin/pkg/GameObject.class
+        deleted:    bin/pkg/Handler.class
+        deleted:    bin/pkg/ID.class
+        deleted:    bin/pkg/KeyInput.class
+        deleted:    bin/pkg/MouseInput.class
+        deleted:    bin/pkg/Player.class
+        deleted:    bin/pkg/SpriteSheet.class
+        deleted:    bin/pkg/Window.class
+        modified:   src/pkg/Game.java
+
+PS C:\Users\devin\eclipse-workspace\Java2DGameTemplate> git commit -m 'ignore class files and modify game.java test'
+[test 60f898e] ignore class files and modify game.java test
+ 18 files changed, 6 insertions(+), 7 deletions(-)
+ delete mode 100644 bin/pkg/AmmoCrate.class
+ delete mode 100644 bin/pkg/Block.class
+ delete mode 100644 bin/pkg/BufferedImageLoader.class
+ delete mode 100644 bin/pkg/Bullet.class
+ delete mode 100644 bin/pkg/Camera.class
+ delete mode 100644 bin/pkg/Enemy.class
+ delete mode 100644 bin/pkg/Exit.class
+ delete mode 100644 bin/pkg/Game.class
+ delete mode 100644 bin/pkg/GameObject.class
+ delete mode 100644 bin/pkg/Handler.class
+ delete mode 100644 bin/pkg/ID.class
+ delete mode 100644 bin/pkg/KeyInput.class
+ delete mode 100644 bin/pkg/MouseInput.class
+ delete mode 100644 bin/pkg/Player.class
+ delete mode 100644 bin/pkg/SpriteSheet.class
+ delete mode 100644 bin/pkg/Window.class
+PS C:\Users\devin\eclipse-workspace\Java2DGameTemplate> git push
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (6/6), 553 bytes | 553.00 KiB/s, done.
+Total 6 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/devindt99/java2DGameTemplate.git
+   157552f..60f898e  test -> test
+PS C:\Users\devin\eclipse-workspace\Java2DGameTemplate> git add .
+PS C:\Users\devin\eclipse-workspace\Java2DGameTemplate> git commit -m 'added newline at bottom of gitignore'
+[test 17df7cd] added newline at bottom of gitignore
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+PS C:\Users\devin\eclipse-workspace\Java2DGameTemplate> git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 373 bytes | 373.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/devindt99/java2DGameTemplate.git
+   60f898e..17df7cd  test -> test
+PS C:\Users\devin\eclipse-workspace\Java2DGameTemplate> git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+PS C:\Users\devin\eclipse-workspace\Java2DGameTemplate>
