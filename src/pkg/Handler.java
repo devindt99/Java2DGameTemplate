@@ -1,4 +1,5 @@
 package pkg;
+
 import pkg.models.GameObject;
 
 import java.awt.Graphics;
@@ -6,86 +7,86 @@ import java.util.ArrayList;
 
 /**
  * @author Zack (RealTutsGML)
- *
  */
 public class Handler { //Handler class holds, updates, and renders game objects
 
-	private ArrayList<GameObject> object = new ArrayList<GameObject>();
-	
-	private boolean up = false, down = false, right = false, left = false;
-	
-	public ArrayList<GameObject> getObjects() { //GameObjects all stored together in ArrayList
-		return object;
-	}
+    private ArrayList<GameObject> object = new ArrayList<GameObject>();
 
-	public void setObject(ArrayList<GameObject> object) {
-		this.object = object;
-	}
+    private boolean up = false, down = false, right = false, left = false;
 
-	//simple methods/setters used with key inputs to control movement in-game
-	public boolean isUp() {
-		return up;
-	}
+    public ArrayList<GameObject> getObjects() { //GameObjects all stored together in ArrayList
+        return object;
+    }
 
-	public void setUp(boolean up) {
-		this.up = up;
-	}
+    public void setObject(ArrayList<GameObject> object) {
+        this.object = object;
+    }
 
-	public boolean isDown() {
-		return down;
-	}
+    //simple methods/setters used with key inputs to control movement in-game
+    public boolean isUp() {
+        return up;
+    }
 
-	public void setDown(boolean down) {
-		this.down = down;
-	}
+    public void setUp(boolean up) {
+        this.up = up;
+    }
 
-	public boolean isRight() {
-		return right;
-	}
+    public boolean isDown() {
+        return down;
+    }
 
-	public void setRight(boolean right) {
-		this.right = right;
-	}
+    public void setDown(boolean down) {
+        this.down = down;
+    }
 
-	public boolean isLeft() {
-		return left;
-	}
+    public boolean isRight() {
+        return right;
+    }
 
-	public void setLeft(boolean left) {
-		this.left = left;
-	}
+    public void setRight(boolean right) {
+        this.right = right;
+    }
 
-	/**
-	 * Tick() method is called to update/animate the game. Each execution of tick represents a new frame in the game.
-	 * Thus, it is an essential method for all elements of our game that must be updated.
-	 * 
-	 */
-	public void tick() {
-		for (int i = 0; i < object.size(); i++) {
-			GameObject tempObject = object.get(i);
-			
-			tempObject.tick();
-		}
-			
-			
-	}
-	/**
-	 * Render() is called to draw objects into our game.
-	 * @param Graphics g
-	 */
-	public void render(Graphics g) {
-		for(int i = 0;  i < object.size(); i++) {
-			GameObject tempObject = object.get(i);
-			
-			tempObject.render(g);
-		}
-	}
+    public boolean isLeft() {
+        return left;
+    }
 
-	public void addObject(GameObject tempObject) {
-		object.add(tempObject);
-	}
+    public void setLeft(boolean left) {
+        this.left = left;
+    }
 
-	public void removeObject(GameObject tempObject) {
-		object.remove(tempObject);
-	}
+    /**
+     * Tick() method is called to update/animate the game. Each execution of tick represents a new frame in the game.
+     * Thus, it is an essential method for all elements of our game that must be updated.
+     */
+    public void tick() {
+        for (int i = 0; i < object.size(); i++) {
+            GameObject tempObject = object.get(i);
+
+            tempObject.tick();
+        }
+
+
+    }
+
+    /**
+     * Render() is called to draw objects into our game.
+     *
+     * @param Graphics g
+     */
+    public void render(Graphics g) {
+        for (int i = 0; i < object.size(); i++) {
+            GameObject tempObject = object.get(i);
+
+            tempObject.render(g);
+        }
+    }
+
+    public void addObject(GameObject tempObject) {
+        object.add(tempObject);
+    }
+
+    public void removeObject(GameObject tempObject) {
+        object.remove(tempObject);
+    }
 }
