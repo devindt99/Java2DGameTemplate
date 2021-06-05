@@ -1,6 +1,5 @@
 package pkg.models;
 import pkg.Handler;
-import pkg.ID;
 import pkg.SpriteSheet;
 
 import java.awt.Graphics;
@@ -23,8 +22,8 @@ public class Enemy extends GameObject{
 	
 	private BufferedImage enemy_image[] = new BufferedImage[3];
 	
-	public Enemy(int x, int y, ID id, Handler handler, SpriteSheet ss) {
-		super(x, y, id, handler, ss);
+	public Enemy(int x, int y, Handler handler, SpriteSheet ss) {
+		super(x, y, handler, ss);
 		this.handler = handler;
 		enemy_image[0] = ss.grabImage(4, 1, 32, 32);
 		enemy_image[1] = ss.grabImage(5, 1, 32, 32);
@@ -44,10 +43,10 @@ public class Enemy extends GameObject{
 		
 		choose = r.nextInt(50);
 		
-		for (int i = 0; i < handler.getObject().size(); i++) {
-			GameObject tempObject = handler.getObject().get(i);
+		for (int i = 0; i < handler.getObjects().size(); i++) {
+			GameObject tempObject = handler.getObjects().get(i);
 			
-			if (tempObject.getId() == ID.Block) {
+			if (tempObject instanceof Block) {
 				if(getLeftBounds().intersects(tempObject.getBounds())) {
 					
 					x = (tempObject.getX()+48);
@@ -81,7 +80,7 @@ public class Enemy extends GameObject{
 				velY = (float) ((r.nextInt(4 - -4) + -4) * speed);
 			}
 			
-			if (tempObject.getId() == ID.Bullet) {
+			if (tempObject instanceof Bullet) {
 				if (getBounds().intersects(tempObject.getBounds())) {
 					hp-=50;
 					handler.removeObject(tempObject);

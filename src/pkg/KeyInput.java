@@ -1,5 +1,6 @@
 package pkg;
 import pkg.models.GameObject;
+import pkg.models.Player;
 
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
@@ -19,10 +20,10 @@ public class KeyInput extends KeyAdapter { //Keeps track of user keystrokes
 	public void keyPressed (KeyEvent e) {
 		int key = e.getKeyCode();
 		
-		for (int i = 0; i < handler.getObject().size(); i++) {
-			GameObject tempObject = handler.getObject().get(i);
+		for (int i = 0; i < handler.getObjects().size(); i++) {
+			GameObject tempObject = handler.getObjects().get(i);
 			
-			if(tempObject.getId() == ID.Player) { //movement controls mapped to keys for Player object
+			if(tempObject instanceof Player) { //movement controls mapped to keys for Player object
 				if (key == KeyEvent.VK_W) handler.setUp(true);
 				if (key == KeyEvent.VK_S) handler.setDown(true);
 				if (key == KeyEvent.VK_D) handler.setRight(true);
@@ -36,10 +37,10 @@ public class KeyInput extends KeyAdapter { //Keeps track of user keystrokes
 	public void keyReleased (KeyEvent e) { //key release events immediately stop movement when keys released, for fast, responsive movement
 		int key = e.getKeyCode();
 		
-		for (int i = 0; i < handler.getObject().size(); i++) {
-			GameObject tempObject = handler.getObject().get(i);
+		for (int i = 0; i < handler.getObjects().size(); i++) {
+			GameObject tempObject = handler.getObjects().get(i);
 			
-			if(tempObject.getId() == ID.Player) {
+			if(tempObject instanceof Player) {
 				if (key == KeyEvent.VK_W) handler.setUp(false);
 				if (key == KeyEvent.VK_S) handler.setDown(false);
 				if (key == KeyEvent.VK_D) handler.setRight(false);

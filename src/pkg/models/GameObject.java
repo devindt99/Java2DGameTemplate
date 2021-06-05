@@ -1,6 +1,5 @@
 package pkg.models;
 import pkg.Handler;
-import pkg.ID;
 import pkg.SpriteSheet;
 
 import java.awt.Graphics;
@@ -14,7 +13,6 @@ public abstract class GameObject { //Simple superclass for all game objects
 	//data fields shared by all GameObjects
 	protected int x, y, anim;
 	protected float velX = 0, velY = 0;
-	protected ID id;
 	protected Handler handler;
 	protected SpriteSheet ss;
 	public abstract void tick();
@@ -30,20 +28,10 @@ public abstract class GameObject { //Simple superclass for all game objects
 	 * Argumented constructor for GameObjects, defining important params that they all share
 	 *@param int x, int y, ID id, Handler handler, Spritesheet ss
 	 */
-	public GameObject(int x, int y, ID id, Handler handler, SpriteSheet ss) {
+	public GameObject(int x, int y, Handler handler, SpriteSheet ss) {
 		this.x = x;
 		this.y = y;
-		this.id = id;
 		this.ss = ss;
-	}
-	
-	//Setters and getters that apply to all game objects
-	public ID getId() {
-		return id;
-	}
-
-	public void setId(ID id) {
-		this.id = id;
 	}
 
 	public int getX() {

@@ -1,6 +1,5 @@
 package pkg.models;
 import pkg.Handler;
-import pkg.ID;
 import pkg.SpriteSheet;
 
 /**
@@ -20,8 +19,8 @@ public class AmmoCrate extends GameObject {
 	 * Argumented constructor for AmmoCrate
 	 * @param int x, int y, ID id, Handler handler, Spritesheet ss
 	 */
-	public AmmoCrate(int x, int y, ID id, Handler handler, SpriteSheet ss) {
-		super(x, y, id, handler, ss);
+	public AmmoCrate(int x, int y, Handler handler, SpriteSheet ss) {
+		super(x, y, handler, ss);
 		ammoCrate_image = ss.grabImage(6, 2, 32, 32);
 	}
 	/**

@@ -14,7 +14,7 @@ public class Handler { //Handler class holds, updates, and renders game objects
 	
 	private boolean up = false, down = false, right = false, left = false;
 	
-	public ArrayList<GameObject> getObject() { //GameObjects all stored together in ArrayList
+	public ArrayList<GameObject> getObjects() { //GameObjects all stored together in ArrayList
 		return object;
 	}
 

@@ -1,6 +1,5 @@
 package pkg.models;
 import pkg.Handler;
-import pkg.ID;
 import pkg.SpriteSheet;
 
 import java.awt.Color;
@@ -18,8 +17,8 @@ public class Block extends GameObject {
 	 * Argumented constructor for Block
 	 * @param int x, int y, ID id, Handler handler, Spritesheet ss
 	 */
-	public Block(int x, int y, ID id, Handler handler, SpriteSheet ss) {
-		super(x, y, id, handler, ss);
+	public Block(int x, int y, Handler handler, SpriteSheet ss) {
+		super(x, y, handler, ss);
 		block_image = ss.grabImage(5, 2, 32, 32);
 	}
 

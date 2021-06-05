@@ -113,9 +113,9 @@ public class Game extends Canvas implements Runnable { //Canvas provides a surfa
 	
 	public void tick() { //tick() updates our game each time it is executed. It is essential for our run() method above.
 		
-		for(int i = 0; i < handler.getObject().size(); i++) {
-			if(handler.getObject().get(i).getId() == ID.Player) {
-				camera.tick(handler.getObject().get(i));
+		for(int i = 0; i < handler.getObjects().size(); i++) {
+			if(handler.getObjects().get(i) instanceof Player) {
+				camera.tick(handler.getObjects().get(i));
 			}
 		}
 		
@@ -139,8 +139,8 @@ public class Game extends Canvas implements Runnable { //Canvas provides a surfa
 	
 	public void unloadLvl()  { //removes all GameObjects in the game
 		for (int ii = 0; ii <10; ii++) {
-			for (int i = 0; i < handler.getObject().size(); i++) {
-				GameObject tempObject = handler.getObject().get(i);
+			for (int i = 0; i < handler.getObjects().size(); i++) {
+				GameObject tempObject = handler.getObjects().get(i);
 				handler.removeObject(tempObject);
 			}
 		}
@@ -204,19 +204,19 @@ public class Game extends Canvas implements Runnable { //Canvas provides a surfa
 				int blue = (pixel) & 0xff;
 				
 				if (red == 255 && green == 0 && blue == 0)
-					handler.addObject(new Block(xx*32, yy*32, ID.Block, handler, ss));
+					handler.addObject(new Block(xx*32, yy*32, handler, ss));
 				
 				if (green == 255 && blue ==0)
-					handler.addObject(new Enemy(xx*32, yy*32, ID.Enemy, handler, ss));
+					handler.addObject(new Enemy(xx*32, yy*32, handler, ss));
 				
 				if (blue == 255 && green == 0 && red == 0)
-					handler.addObject(new Player(xx*32, yy*32, ID.Player, handler, this, ss));
+					handler.addObject(new Player(xx*32, yy*32, handler, this, ss));
 				
 				if (blue == 255 && green == 255)
-					handler.addObject(new AmmoCrate(xx*32, yy*32, ID.AmmoCrate, handler, ss));
+					handler.addObject(new AmmoCrate(xx*32, yy*32, handler, ss));
 				
 				if (blue == 255 && red == 255)
-					handler.addObject(new Exit(xx*32, yy*32, ID.Exit, handler, ss));
+					handler.addObject(new Exit(xx*32, yy*32, handler, ss));
 			
 			}
 	}

@@ -1,7 +1,6 @@
 package pkg.models;
 import pkg.Game;
 import pkg.Handler;
-import pkg.ID;
 import pkg.SpriteSheet;
 
 import java.awt.Graphics;
@@ -26,8 +25,8 @@ public class Player extends GameObject { //Simple player subclass for user-contr
 
 	
 	
-	public Player(int x, int y, ID id, Handler handler, Game game, SpriteSheet ss) {
-		super(x, y, id, handler, ss);
+	public Player(int x, int y, Handler handler, Game game, SpriteSheet ss) {
+		super(x, y, handler, ss);
 		this.handler = handler;
 		this.game = game;
 		
@@ -78,11 +77,11 @@ public class Player extends GameObject { //Simple player subclass for user-contr
 
 	private void collision() { //You can fix the sticking by creating separate floor and wall objects
 		
-		for(int i = 0; i < handler.getObject().size(); i++) {
+		for(int i = 0; i < handler.getObjects().size(); i++) {
 			
-			GameObject tempObject = handler.getObject().get(i);
+			GameObject tempObject = handler.getObjects().get(i);
 			
-			if(tempObject.getId() == ID.Block) {
+			if(tempObject instanceof Block) {
 				
 				if(getLeftBounds().intersects(tempObject.getBounds())) {
 					
@@ -112,7 +111,7 @@ public class Player extends GameObject { //Simple player subclass for user-contr
 
 			}
 			
-			if(tempObject.getId() == ID.Enemy) {
+			if(tempObject instanceof Enemy) {
 				
 				if(getBounds().intersects(tempObject.getBounds())) {
 			
@@ -126,7 +125,7 @@ public class Player extends GameObject { //Simple player subclass for user-contr
 				
 				}
 			}	
-			if(tempObject.getId() == ID.AmmoCrate) {
+			if(tempObject instanceof AmmoCrate) {
 			
 				if(getBounds().intersects(tempObject.getBounds())) {
 				
@@ -144,7 +143,7 @@ public class Player extends GameObject { //Simple player subclass for user-contr
 				
 			} 
 
-			if (tempObject.getId() == ID.Exit) {
+			if (tempObject instanceof Exit) {
 				if(getBounds().intersects(tempObject.getBounds())) {
 					game.nextLvl = true;
 				}

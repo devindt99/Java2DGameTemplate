@@ -1,6 +1,5 @@
 package pkg.models;
 import pkg.Handler;
-import pkg.ID;
 import pkg.SpriteSheet;
 
 import java.awt.Color;
@@ -12,8 +11,8 @@ import java.awt.Rectangle;
  */
 public class Exit extends GameObject{ //this is the magenta square that is the "goal" for our game.
 
-	public Exit(int x, int y, ID id, Handler handler, SpriteSheet ss) {
-		super(x, y, id, handler, ss);
+	public Exit(int x, int y, Handler handler, SpriteSheet ss) {
+		super(x, y, handler, ss);
 		
 	}
 

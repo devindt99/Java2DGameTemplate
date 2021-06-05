@@ -1,6 +1,5 @@
 package pkg.models;
 import pkg.Handler;
-import pkg.ID;
 import pkg.SpriteSheet;
 
 import java.awt.Color;
@@ -17,14 +16,13 @@ public class Bullet extends GameObject{
 	/**Argumented constructor
 	 * @param x
 	 * @param y
-	 * @param id
 	 * @param handler
 	 * @param mx
 	 * @param my
 	 * @param ss
 	 */
-	public Bullet(int x, int y, ID id, Handler handler, int mx, int my, SpriteSheet ss) {
-		super(x, y, id, handler, ss);
+	public Bullet(int x, int y, Handler handler, int mx, int my, SpriteSheet ss) {
+		super(x, y, handler, ss);
 		this.handler = handler;
 		  int speed = 10;
 		  
@@ -43,10 +41,10 @@ public class Bullet extends GameObject{
 		x += velX;
 		y += velY;
 		
-		for (int i = 0; i < handler.getObject().size(); i++) {
-			GameObject tempObject = handler.getObject().get(i);
+		for (int i = 0; i < handler.getObjects().size(); i++) {
+			GameObject tempObject = handler.getObjects().get(i);
 			
-			if (tempObject.getId() == ID.Block) {
+			if (tempObject instanceof Block) {
 				if (getBounds().intersects(tempObject.getBounds())) {
 				handler.removeObject(this);
 				}
