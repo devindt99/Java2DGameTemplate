@@ -1,4 +1,11 @@
 package pkg;
+import pkg.models.AmmoCrate;
+import pkg.models.Block;
+import pkg.models.Enemy;
+import pkg.models.Exit;
+import pkg.models.GameObject;
+import pkg.models.Player;
+
 import java.awt.Canvas;
 import java.awt.Color;
 import java.awt.Graphics;

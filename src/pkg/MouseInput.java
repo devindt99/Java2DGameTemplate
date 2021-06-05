@@ -1,4 +1,7 @@
 package pkg;
+import pkg.models.Bullet;
+import pkg.models.GameObject;
+
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 /**

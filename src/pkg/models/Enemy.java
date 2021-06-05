@@ -1,7 +1,9 @@
-package pkg;
-import java.awt.Color;
+package pkg.models;
+import pkg.Handler;
+import pkg.ID;
+import pkg.SpriteSheet;
+
 import java.awt.Graphics;
-import java.awt.Graphics2D;
 import java.awt.Rectangle;
 import java.awt.image.BufferedImage;
 import java.util.Random;

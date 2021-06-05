@@ -1,5 +1,7 @@
 package pkg;
 
+import pkg.models.GameObject;
+
 public class Camera {
 /**
  * @author Zack (RealTutsGML)

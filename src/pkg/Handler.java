@@ -1,7 +1,9 @@
 package pkg;
+import pkg.models.GameObject;
+
 import java.awt.Graphics;
 import java.util.ArrayList;
-import java.util.LinkedList;
+
 /**
  * @author Zack (RealTutsGML)
  *

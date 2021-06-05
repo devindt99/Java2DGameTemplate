@@ -1,4 +1,9 @@
-package pkg;
+package pkg.models;
+import pkg.Game;
+import pkg.Handler;
+import pkg.ID;
+import pkg.SpriteSheet;
+
 import java.awt.Graphics;
 import java.awt.Rectangle;
 import java.awt.image.BufferedImage;

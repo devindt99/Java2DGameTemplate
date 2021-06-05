@@ -1,4 +1,8 @@
-package pkg;
+package pkg.models;
+import pkg.Handler;
+import pkg.ID;
+import pkg.SpriteSheet;
+
 import java.awt.Graphics;
 import java.awt.Rectangle;
 /**

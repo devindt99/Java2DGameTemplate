@@ -1,4 +1,6 @@
 package pkg;
+import pkg.models.GameObject;
+
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 /**
