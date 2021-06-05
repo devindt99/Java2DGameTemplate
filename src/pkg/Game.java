@@ -106,9 +106,9 @@ public class Game extends Canvas implements Runnable { //Canvas provides a surfa
 	
 	public void tick() { //tick() updates our game each time it is executed. It is essential for our run() method above.
 		
-		for(int i = 0; i < handler.object.size(); i++) {
-			if(handler.object.get(i).getId() == ID.Player) {
-				camera.tick(handler.object.get(i));
+		for(int i = 0; i < handler.getObject().size(); i++) {
+			if(handler.getObject().get(i).getId() == ID.Player) {
+				camera.tick(handler.getObject().get(i));
 			}
 		}
 		
@@ -132,8 +132,8 @@ public class Game extends Canvas implements Runnable { //Canvas provides a surfa
 	
 	public void unloadLvl()  { //removes all GameObjects in the game
 		for (int ii = 0; ii <10; ii++) {
-			for (int i = 0; i < handler.object.size(); i++) {
-				GameObject tempObject = handler.object.get(i);
+			for (int i = 0; i < handler.getObject().size(); i++) {
+				GameObject tempObject = handler.getObject().get(i);
 				handler.removeObject(tempObject);
 			}
 		}

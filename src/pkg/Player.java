@@ -73,9 +73,9 @@ public class Player extends GameObject { //Simple player subclass for user-contr
 
 	private void collision() { //You can fix the sticking by creating separate floor and wall objects
 		
-		for(int i = 0; i < handler.object.size(); i++) {
+		for(int i = 0; i < handler.getObject().size(); i++) {
 			
-			GameObject tempObject = handler.object.get(i);
+			GameObject tempObject = handler.getObject().get(i);
 			
 			if(tempObject.getId() == ID.Block) {
 				

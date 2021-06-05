@@ -8,7 +8,7 @@ import java.util.LinkedList;
  */
 public class Handler { //Handler class holds, updates, and renders game objects
 
-	ArrayList<GameObject> object = new ArrayList<GameObject>();
+	private ArrayList<GameObject> object = new ArrayList<GameObject>();
 	
 	private boolean up = false, down = false, right = false, left = false;
 	

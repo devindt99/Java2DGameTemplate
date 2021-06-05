@@ -39,8 +39,8 @@ public class Bullet extends GameObject{
 		x += velX;
 		y += velY;
 		
-		for (int i = 0; i < handler.object.size(); i++) {
-			GameObject tempObject = handler.object.get(i);
+		for (int i = 0; i < handler.getObject().size(); i++) {
+			GameObject tempObject = handler.getObject().get(i);
 			
 			if (tempObject.getId() == ID.Block) {
 				if (getBounds().intersects(tempObject.getBounds())) {
