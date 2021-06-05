@@ -1,28 +1,28 @@
-package pkg;
+package pkg.game;
 
 import pkg.models.GameObject;
 
 import java.awt.Graphics;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Queue;
+import java.util.concurrent.LinkedBlockingQueue;
 
 /**
  * @author Zack (RealTutsGML)
  */
 public class Handler { //Handler class holds, updates, and renders game objects
 
-    private List<GameObject> objects = new ArrayList<>();
+    private Queue<GameObject> objects = new LinkedBlockingQueue<>();
 
     private boolean up;
     private boolean down;
     private boolean right;
     private boolean left;
 
-    public List<GameObject> getObjects() { //GameObjects all stored together in ArrayList
+    public Queue<GameObject> getObjects() { //GameObjects all stored together in ArrayList
         return objects;
     }
 
-    public void setObjects(List<GameObject> objects) {
+    public void setObjects(Queue<GameObject> objects) {
         this.objects = objects;
     }
 
@@ -64,8 +64,7 @@ public class Handler { //Handler class holds, updates, and renders game objects
      * Thus, it is an essential method for all elements of our game that must be updated.
      */
     public void tick() {
-        for (int i = 0; i < objects.size(); i++) {
-            GameObject tempObject = objects.get(i);
+        for (GameObject tempObject : objects) {
 
             tempObject.tick();
         }
@@ -79,9 +78,7 @@ public class Handler { //Handler class holds, updates, and renders game objects
      * @param Graphics g
      */
     public void render(Graphics g) {
-        for (int i = 0; i < objects.size(); i++) {
-            GameObject tempObject = objects.get(i);
-
+        for (GameObject tempObject : objects) {
             tempObject.render(g);
         }
     }

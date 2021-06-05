@@ -1,4 +1,4 @@
-package pkg;
+package pkg.game;
 
 import pkg.models.AmmoCrate;
 import pkg.models.Block;
@@ -46,12 +46,10 @@ public class Game extends Canvas implements Runnable { //Canvas provides a surfa
     //Game() constructor holds everything that must be initialized when the game begins, such as levels, input listeners, the camera, etc.
     public Game() {
         new Window(1000, 563, "Game", this);
-        start();
 
         handler = new Handler();
         camera = new Camera(0, 0);
         this.addKeyListener(new KeyInput(handler));
-
 
         BufferedImageLoader loader = new BufferedImageLoader();
 
@@ -62,28 +60,29 @@ public class Game extends Canvas implements Runnable { //Canvas provides a surfa
         level1 = loader.loadImage("/wizard_level.png");
         this.addMouseListener(new MouseInput(handler, camera, this, ss));
 
-
         loadLevel(level1);
 
         gameOver = loader.loadImage("/game_over.png");
         youWin = loader.loadImage("/you_win.png");
-
     }
 
-    //Our main method, which simply runs everything we have defined above in our Game() constructor.
-    public static void main(String[] args) {
+    public void start() { //called to start the thread/start running the game
+        if (isRunning) {
+            return;
+        }
 
-        new Game();
-    }
-
-    private void start() { //called to start the thread/start running the game
         isRunning = true;
         thread = new Thread(this);
         thread.start();
     }
 
     private void stop() { //called to stop the thread/stop running the game
+        if (!isRunning) {
+            return;
+        }
+
         isRunning = false;
+
         try {
             thread.join();
         } catch (InterruptedException e) {
@@ -95,6 +94,7 @@ public class Game extends Canvas implements Runnable { //Canvas provides a surfa
     //The run() method defines the elapsing of time in the game. It is our game loop.
     //Currently, the game is set to run at 60 fps.
     //Fun fact: this game loop was provided by Notch, the creator of Minecraft.
+    @Override
     public void run() {
         this.requestFocus();
         long lastTime = System.nanoTime();
@@ -125,9 +125,9 @@ public class Game extends Canvas implements Runnable { //Canvas provides a surfa
 
     public void tick() { //tick() updates our game each time it is executed. It is essential for our run() method above.
 
-        for (int i = 0; i < handler.getObjects().size(); i++) {
-            if (handler.getObjects().get(i) instanceof Player) {
-                camera.tick(handler.getObjects().get(i));
+        for (GameObject obj : handler.getObjects()) {
+            if (obj instanceof Player) {
+                camera.tick(obj);
             }
         }
 
@@ -151,8 +151,7 @@ public class Game extends Canvas implements Runnable { //Canvas provides a surfa
 
     public void unloadLvl() { //removes all GameObjects in the game
         for (int ii = 0; ii < 10; ii++) {
-            for (int i = 0; i < handler.getObjects().size(); i++) {
-                GameObject tempObject = handler.getObjects().get(i);
+            for (GameObject tempObject : handler.getObjects()) {
                 handler.removeObject(tempObject);
             }
         }
@@ -169,7 +168,6 @@ public class Game extends Canvas implements Runnable { //Canvas provides a surfa
         Graphics2D g2d = (Graphics2D) g;
         //////////////////////////////////////anything drawn in-game goes here.
 
-
         g2d.translate(-camera.getX(), -camera.getY());
 
         for (int xx = 0; xx < 2160; xx += 32) {
@@ -177,7 +175,6 @@ public class Game extends Canvas implements Runnable { //Canvas provides a surfa
                 g.drawImage(floor, xx, yy, null);
             }
         }
-
 
         handler.render(g);
 
@@ -230,5 +227,11 @@ public class Game extends Canvas implements Runnable { //Canvas provides a surfa
                     handler.addObject(new Exit(xx * 32, yy * 32, handler, ss));
 
             }
+    }
+
+    //Our main method, which simply runs everything we have defined above in our Game() constructor.
+    public static void main(String[] args) {
+        Game game = new Game();
+        game.start();
     }
 }

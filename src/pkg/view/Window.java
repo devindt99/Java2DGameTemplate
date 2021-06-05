@@ -1,6 +1,6 @@
 package pkg.view;
 
-import pkg.Game;
+import pkg.game.Game;
 
 import javax.swing.JFrame;
 import java.awt.Dimension;

@@ -1,7 +1,7 @@
 package pkg.models;
 
-import pkg.Game;
-import pkg.Handler;
+import pkg.game.Game;
+import pkg.game.Handler;
 import pkg.view.SpriteSheet;
 
 import java.awt.Graphics;
@@ -73,9 +73,7 @@ public class Player extends GameObject { //Simple player subclass for user-contr
 
     private void collision() { //You can fix the sticking by creating separate floor and wall objects
 
-        for (int i = 0; i < handler.getObjects().size(); i++) {
-
-            GameObject tempObject = handler.getObjects().get(i);
+        for (GameObject tempObject : handler.getObjects()) {
 
             if (tempObject instanceof Block) {
 

@@ -6,7 +6,8 @@ public class Camera {
     /**
      * @author Zack (RealTutsGML)
      */
-    private float x, y;
+    private float x;
+    private float y;
 
     public Camera(float x, float y) {
         this.x = x;
@@ -19,8 +20,8 @@ public class Camera {
      */
     public void tick(GameObject object) {
 
-        x += ((object.getX() - x) - 1000 / 2) * 0.05f;
-        y += ((object.getY() - y) - 563 / 2) * 0.05f;
+        x += ((object.getX() - x) - 1000 / 2f) * 0.05f;
+        y += ((object.getY() - y) - 563 / 2f) * 0.05f;
 
         if (x <= 0) x = 0;
         if (x >= 1063) x = 1063;

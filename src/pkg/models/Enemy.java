@@ -1,6 +1,6 @@
 package pkg.models;
 
-import pkg.Handler;
+import pkg.game.Handler;
 import pkg.view.SpriteSheet;
 
 import java.awt.Graphics;
@@ -42,8 +42,7 @@ public class Enemy extends GameObject {
 
         choose = r.nextInt(50);
 
-        for (int i = 0; i < handler.getObjects().size(); i++) {
-            GameObject tempObject = handler.getObjects().get(i);
+        for (GameObject tempObject : handler.getObjects()) {
 
             if (tempObject instanceof Block) {
                 if (getLeftBounds().intersects(tempObject.getBounds())) {

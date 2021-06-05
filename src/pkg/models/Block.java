@@ -1,6 +1,6 @@
 package pkg.models;
 
-import pkg.Handler;
+import pkg.game.Handler;
 import pkg.view.SpriteSheet;
 
 import java.awt.Color;
