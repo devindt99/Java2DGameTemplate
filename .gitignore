@@ -80,7 +80,7 @@ fabric.properties
 .idea/caches/build_file_checksums.ser
 
 .metadata
-#bin/
+bin/
 tmp/
 *.tmp
 *.bak
