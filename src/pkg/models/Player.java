@@ -17,7 +17,6 @@ public class Player extends GameObject { //Simple player subclass for user-contr
     boolean dmgTaken = false;
     double timer = 0;
     int anim = 0;
-    Handler handler;
     Game game;
 
 
@@ -26,7 +25,6 @@ public class Player extends GameObject { //Simple player subclass for user-contr
 
     public Player(int x, int y, Handler handler, Game game, SpriteSheet ss) {
         super(x, y, handler, ss);
-        this.handler = handler;
         this.game = game;
 
         player_image[0] = ss.grabImage(1, 1, 32, 48);

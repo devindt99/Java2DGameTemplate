@@ -19,12 +19,10 @@ public class Enemy extends GameObject {
     boolean slowed = false;
     double speed = 1;
     int timer = 0;
-    private final Handler handler;
     private final BufferedImage[] enemy_image = new BufferedImage[3];
 
     public Enemy(int x, int y, Handler handler, SpriteSheet ss) {
         super(x, y, handler, ss);
-        this.handler = handler;
         enemy_image[0] = ss.grabImage(4, 1, 32, 32);
         enemy_image[1] = ss.grabImage(5, 1, 32, 32);
         enemy_image[2] = ss.grabImage(6, 1, 32, 32);

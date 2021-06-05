@@ -12,8 +12,11 @@ import java.awt.Rectangle;
 public abstract class GameObject { //Simple superclass for all game objects
 
     //data fields shared by all GameObjects
-    protected int x, y, anim;
-    protected float velX = 0, velY = 0;
+    protected int x;
+    protected int y;
+    protected int anim;
+    protected float velX = 0;
+    protected float velY = 0;
     protected Handler handler;
     protected SpriteSheet ss;
 
@@ -22,10 +25,11 @@ public abstract class GameObject { //Simple superclass for all game objects
      *
      * @param int x, int y, ID id, Handler handler, Spritesheet ss
      */
-    public GameObject(int x, int y, Handler handler, SpriteSheet ss) {
+    protected GameObject(int x, int y, Handler handler, SpriteSheet ss) {
         this.x = x;
         this.y = y;
         this.ss = ss;
+        this.handler = handler;
     }
 
     public abstract void tick();

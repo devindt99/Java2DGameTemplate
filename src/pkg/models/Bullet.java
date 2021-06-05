@@ -25,7 +25,7 @@ public class Bullet extends GameObject {
      */
     public Bullet(int x, int y, Handler handler, int mx, int my, SpriteSheet ss) {
         super(x, y, handler, ss);
-        this.handler = handler;
+
         int speed = 10;
 
         double bulletAngle = Math.toDegrees(Math.atan2(my - y, mx - x));
