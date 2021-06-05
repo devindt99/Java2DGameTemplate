@@ -4,22 +4,26 @@ import pkg.models.GameObject;
 
 import java.awt.Graphics;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author Zack (RealTutsGML)
  */
 public class Handler { //Handler class holds, updates, and renders game objects
 
-    private ArrayList<GameObject> object = new ArrayList<GameObject>();
+    private List<GameObject> objects = new ArrayList<>();
 
-    private boolean up = false, down = false, right = false, left = false;
+    private boolean up;
+    private boolean down;
+    private boolean right;
+    private boolean left;
 
-    public ArrayList<GameObject> getObjects() { //GameObjects all stored together in ArrayList
-        return object;
+    public List<GameObject> getObjects() { //GameObjects all stored together in ArrayList
+        return objects;
     }
 
-    public void setObject(ArrayList<GameObject> object) {
-        this.object = object;
+    public void setObjects(List<GameObject> objects) {
+        this.objects = objects;
     }
 
     //simple methods/setters used with key inputs to control movement in-game
@@ -60,8 +64,8 @@ public class Handler { //Handler class holds, updates, and renders game objects
      * Thus, it is an essential method for all elements of our game that must be updated.
      */
     public void tick() {
-        for (int i = 0; i < object.size(); i++) {
-            GameObject tempObject = object.get(i);
+        for (int i = 0; i < objects.size(); i++) {
+            GameObject tempObject = objects.get(i);
 
             tempObject.tick();
         }
@@ -75,18 +79,18 @@ public class Handler { //Handler class holds, updates, and renders game objects
      * @param Graphics g
      */
     public void render(Graphics g) {
-        for (int i = 0; i < object.size(); i++) {
-            GameObject tempObject = object.get(i);
+        for (int i = 0; i < objects.size(); i++) {
+            GameObject tempObject = objects.get(i);
 
             tempObject.render(g);
         }
     }
 
     public void addObject(GameObject tempObject) {
-        object.add(tempObject);
+        objects.add(tempObject);
     }
 
     public void removeObject(GameObject tempObject) {
-        object.remove(tempObject);
+        objects.remove(tempObject);
     }
 }
