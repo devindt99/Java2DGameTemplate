@@ -2,7 +2,7 @@ package pkg.models;
 
 import pkg.Game;
 import pkg.Handler;
-import pkg.SpriteSheet;
+import pkg.view.SpriteSheet;
 
 import java.awt.Graphics;
 import java.awt.Rectangle;

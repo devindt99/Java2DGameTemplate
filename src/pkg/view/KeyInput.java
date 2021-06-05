@@ -1,5 +1,6 @@
-package pkg;
+package pkg.view;
 
+import pkg.Handler;
 import pkg.models.GameObject;
 import pkg.models.Player;
 

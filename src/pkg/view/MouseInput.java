@@ -1,5 +1,7 @@
-package pkg;
+package pkg.view;
 
+import pkg.Game;
+import pkg.Handler;
 import pkg.models.Bullet;
 import pkg.models.GameObject;
 import pkg.models.Player;

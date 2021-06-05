@@ -1,7 +1,7 @@
 package pkg.models;
 
 import pkg.Handler;
-import pkg.SpriteSheet;
+import pkg.view.SpriteSheet;
 
 import java.awt.Color;
 import java.awt.Graphics;

@@ -1,4 +1,4 @@
-package pkg;
+package pkg.view;
 
 import pkg.models.GameObject;
 

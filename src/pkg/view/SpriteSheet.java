@@ -1,4 +1,4 @@
-package pkg;
+package pkg.view;
 
 import java.awt.image.BufferedImage;
 

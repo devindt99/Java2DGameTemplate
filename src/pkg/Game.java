@@ -6,6 +6,12 @@ import pkg.models.Enemy;
 import pkg.models.Exit;
 import pkg.models.GameObject;
 import pkg.models.Player;
+import pkg.view.BufferedImageLoader;
+import pkg.view.Camera;
+import pkg.view.KeyInput;
+import pkg.view.MouseInput;
+import pkg.view.SpriteSheet;
+import pkg.view.Window;
 
 import java.awt.Canvas;
 import java.awt.Color;

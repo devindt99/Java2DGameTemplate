@@ -1,4 +1,4 @@
-package pkg;
+package pkg.view;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
